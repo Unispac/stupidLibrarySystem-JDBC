@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiFrame.pageCtrl.boOrRePage.boOrRePage">
+   <children>
+      <Text fill="#00b2f8" layoutX="172.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stupid-Libary">
+         <font>
+            <Font size="96.0" />
+         </font>
+      </Text>
+      <Text fill="#da0000" layoutX="148.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Borrow/Return">
+         <font>
+            <Font size="96.0" />
+         </font>
+      </Text>
+      <MenuBar prefHeight="40.0" prefWidth="1200.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Functions">
+               <items>
+                  <MenuItem fx:id="toMainPage" mnemonicParsing="false" onAction="#toMainPage" text="Main Page" />
+                  <MenuItem fx:id="toImport" mnemonicParsing="false" onAction="#toImport" text="Import Book(s)" />
+                  <MenuItem fx:id="toSearch" mnemonicParsing="false" onAction="#toSearch" text="Search Book(s)" />
+                  <MenuItem fx:id="toBoOrRe" mnemonicParsing="false" onAction="#toBorrow" text="Borrow/Return" />
+                  <MenuItem fx:id="toUserManagement" mnemonicParsing="false" onAction="#toUserManagement" text="Users Management" />
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Options">
+            <items>
+              <MenuItem fx:id="toLogOut" mnemonicParsing="false" onAction="#toLogOut" text="Log Out" />
+                  <MenuItem fx:id="toExit" mnemonicParsing="false" onAction="#toExit" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="toHelp" mnemonicParsing="false" onAction="#toHelp" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="948.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@wyhnb.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="933.0" layoutY="570.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@qxysb.png" />
+         </image>
+      </ImageView>
+      <Text fill="#c6b714" layoutX="923.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed By">
+         <font>
+            <Font name="Ink Free" size="36.0" />
+         </font>
+      </Text>
+      <Text fill="#00ff33" layoutX="990.0" layoutY="765.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@ZJU">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="183.0" fitWidth="181.0" layoutX="933.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icon.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="189.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Card ID">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="cardId" layoutX="330.0" layoutY="367.0" />
+      <Button layoutX="600.0" layoutY="365.0" mnemonicParsing="false" onAction="#showCardInfo" prefHeight="24.0" prefWidth="150.0" text="Card Info">
+         <font>
+            <Font size="55.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="186.0" layoutY="451.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book ID">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="bookId" layoutX="330.0" layoutY="424.0" />
+      <Button layoutX="600.0" layoutY="421.0" mnemonicParsing="false" onAction="#showBookInfo" prefHeight="43.0" prefWidth="150.0" text="Book Info">
+         <font>
+            <Font size="55.0" />
+         </font>
+      </Button>
+      <Button layoutX="209.0" layoutY="645.0" mnemonicParsing="false" onAction="#toBorrow" prefHeight="24.0" prefWidth="167.0" text="Borrow">
+         <font>
+            <Font size="55.0" />
+         </font>
+      </Button>
+      <Button layoutX="678.0" layoutY="645.0" mnemonicParsing="false" onAction="#toReturn" prefHeight="24.0" prefWidth="167.0" text="Return">
+         <font>
+            <Font size="55.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="165.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Borrow Date">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="57.0" layoutY="610.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Due Date">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="495.0" layoutY="609.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Date">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="borrowDateY" layoutX="330.0" layoutY="482.0" prefHeight="37.0" prefWidth="67.0" />
+      <TextField fx:id="borrowDateM" layoutX="410.0" layoutY="482.0" prefHeight="37.0" prefWidth="67.0" />
+      <TextField fx:id="borrowDateD" layoutX="488.0" layoutY="482.0" prefHeight="37.0" prefWidth="67.0" />
+      <TextField fx:id="dueDateY" layoutX="176.0" layoutY="582.0" prefHeight="37.0" prefWidth="67.0" />
+      <TextField fx:id="dueDateM" layoutX="252.0" layoutY="582.0" prefHeight="37.0" prefWidth="67.0" />
+      <TextField fx:id="dueDateD" layoutX="328.0" layoutY="582.0" prefHeight="37.0" prefWidth="67.0" />
+      <TextField fx:id="returnDateY" layoutX="639.0" layoutY="582.0" prefHeight="37.0" prefWidth="67.0" />
+      <TextField fx:id="returnDateM" layoutX="715.0" layoutY="582.0" prefHeight="37.0" prefWidth="67.0" />
+      <TextField fx:id="returnDateD" layoutX="792.0" layoutY="582.0" prefHeight="37.0" prefWidth="67.0" />
+      <Text fill="#0bee62" layoutX="262.0" layoutY="763.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Note that date should be in format : yyyy/mm/dd ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
